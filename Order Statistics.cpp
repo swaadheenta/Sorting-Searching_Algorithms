@@ -1,20 +1,13 @@
-#include<iostream>
-#include<climits>
-#include<cstdlib>
+#include<bits/stdc++.h>
 using namespace std;
 
 int randomPartition(int arr[], int l, int r);
-
-
 int kthSmallest(int arr[], int l, int r, int k)    // This function returns k'th smallest element in arr[l..r].
 {
-    // If k is smaller than number of elements in array
+
     if (k > 0 && k <= r - l + 1)
     {
-
         int pos = randomPartition(arr, l, r);
-
-
         if (pos-l == k-1)
             return arr[pos];
         if (pos-l > k-1)
@@ -24,8 +17,7 @@ int kthSmallest(int arr[], int l, int r, int k)    // This function returns k'th
         return kthSmallest(arr, pos+1, r, k-pos+l-1);
     }
 
-
-    return INT_MAX;
+   return INT_MAX;
 }
 
 void swap(int *a, int *b)
@@ -69,7 +61,6 @@ int main()
     cout<<"Enter the elements of the array";
     for(int i=0;i<p;i++)
         cin>>arr[i];
-    //int arr[] = {12, 3, 5, 7, 4, 19, 26};
     int n = sizeof(arr)/sizeof(arr[0]), k;
     cout<<"Enter the value of k";
     cin>>k;
