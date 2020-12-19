@@ -33,8 +33,6 @@ void getZarr(string str, int Z[])
         if (i > R)
         {
             L = R = i;
-
-
             while (R<n && str[R-L] == str[R])
                 R++;
             Z[i] = R-L;
