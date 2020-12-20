@@ -7,7 +7,6 @@ void merge(int arr[], int l, int m, int r)
     int n2 = r - m;
     int L[n1], R[n2],i = 0,j = 0,k = l;
 
-
     for (int i = 0; i < n1; i++)
         L[i] = arr[l + i];
     for (int j = 0; j < n2; j++)
@@ -65,19 +64,19 @@ void printArray(int A[], int size)
 
 
 int main()
-{   cout<<"Enter the size of the array";
+{   
+    cout<<"Enter the size of the array";
     int p;
     cin>>p;
     int arr[p];
     cout<<"Enter the elements of the array";
     for(int i=0;i<p;i++)
         cin>>arr[i];
-    int arr_size = sizeof(arr) / sizeof(arr[0]);
     cout << "Given array is \n";
-    printArray(arr, arr_size);
-    mergeSort(arr, 0, arr_size - 1);
+    printArray(arr, p);
+    mergeSort(arr, 0, p - 1);
     cout << "\nSorted array is \n";
-    printArray(arr, arr_size);
+    printArray(arr, p);
     return 0;
 
 }
