@@ -55,9 +55,8 @@ int main()
     cout<<"Enter the elements of the array";
     for(int i=0;i<p;i++)
         cin>>arr[i];
-    int n = sizeof(arr) / sizeof(arr[0]);
-    quickSort(arr, 0, n - 1);
+    quickSort(arr, 0, p - 1);
     cout << "Sorted array: \n";
-    printArray(arr, n);
+    printArray(arr, p);
     return 0;
 }
