@@ -26,8 +26,7 @@ int main()
     cout<<"Enter the element to be searched";
     int x;
     cin>>x;
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int result = binarySearch(arr, 0, n - 1, x);
+    int result = binarySearch(arr, 0, p - 1, x);
     (result == -1) ? cout << "Element is not present in array": cout << "Element is present at index " << result;
     return 0;
 }
