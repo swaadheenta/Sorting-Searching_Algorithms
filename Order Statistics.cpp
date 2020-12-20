@@ -61,9 +61,10 @@ int main()
     cout<<"Enter the elements of the array";
     for(int i=0;i<p;i++)
         cin>>arr[i];
-    int n = sizeof(arr)/sizeof(arr[0]), k;
     cout<<"Enter the value of k";
+    int k;
     cin>>k;
-    cout << "K'th smallest element is " << kthSmallest(arr, 0, n-1, k);
+    cout << "K'th smallest element is " << kthSmallest(arr, 0, p-1, k);
     return 0;
 }
+
